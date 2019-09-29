@@ -5,6 +5,9 @@
         "airbnb/hooks"
     ],
     "rules": {
-      "semi": [2, "always"]
+      "semi": [2, "always"],
+      "react/jsx-props-no-spreading": [{
+        "html": "ignore"
+      }]
     }
 }
