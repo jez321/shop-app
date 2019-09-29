@@ -22,15 +22,11 @@ const PreviewCollection = ({ title, items }) => (
 
 PreviewCollection.propTypes = {
   title: PropTypes.string.isRequired,
-  items: PropTypes.instanceOf({
-    title: PropTypes.string.isRequired,
-    items: PropTypes.arrayOf({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      imageUrl: PropTypes.string.isRequired,
-      price: PropTypes.number.isRequired,
-    }).isRequired,
-  }).isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+  })).isRequired,
 };
 
 export default PreviewCollection;
