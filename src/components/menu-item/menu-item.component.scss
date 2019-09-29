@@ -8,8 +8,6 @@
     justify-content: center;
     border: 1px solid black;
     margin: 0 7.5px 15px;
-    background-position: center;
-    background-size: cover;
     overflow: hidden;
 
     .content {
@@ -41,6 +39,8 @@
     }
 
     .background-image {
+      background-position: center;
+      background-size: cover;
       width: 100%;
       height: 100%;
       transition: transform 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
