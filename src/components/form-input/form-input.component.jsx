@@ -9,10 +9,10 @@ const FormInput = ({
     <label htmlFor="name">
       {
         label !== undefined ? 
-          <span  className={`form-input-label-text ${otherProps.value.length > 0 ? 'shrink': ''}`}>{label}</span>
+          <span className={`form-input-label-text ${(otherProps.value && otherProps.value.length) > 0 ? 'shrink': ''}`}>{label}</span>
            : null
       }
-      <input className="form-input" onChange={handleChange} name={name} {...otherProps} />
+      <input data-test="form-input-input" className="form-input" onChange={handleChange} name={name} {...otherProps} />
     </label>
   </div>
 );

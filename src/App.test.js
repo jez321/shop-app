@@ -1,11 +1,15 @@
-/* eslint-disable no-undef */
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
+import './matchMedia.mock';
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+const setup = (props = {}, state = null) => {
+  const wrapper = shallow(<App {...props} />);
+  if (state) wrapper.setState(state);
+  return wrapper;
+};
+
+test('renders without error', () => {
+  const wrapper = setup();
+  expect(wrapper).toBeTruthy();
 });
