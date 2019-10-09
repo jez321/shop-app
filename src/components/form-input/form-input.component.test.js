@@ -1,7 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import FormInput from './form-input.component';
 import TestUtil from '../../test/TestUtil';
+import Adapter from 'enzyme-adapter-react-16';
 
 const changeFn = function(){}
 const defaultProps = {
@@ -9,7 +10,7 @@ const defaultProps = {
     name: 'test-name',
     label: 'Test form input',
 };
-
+configure({adapter: new Adapter()});
 const setup = (props = {}, state = null) => {
   const setupProps = { ...defaultProps, ...props };
   const wrapper = shallow(<FormInput {...setupProps} />);
