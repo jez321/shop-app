@@ -3,11 +3,11 @@ import './collection-item.component.scss';
 import PropTypes from 'prop-types';
 
 const CollectionItem = ({ name, price, imageUrl }) => (
-  <div className="collection-item">
+  <div data-test="collection-item" className="collection-item">
     <div className="image" style={{ backgroundImage: `url(${imageUrl})` }} />
     <div className="collection-footer">
-      <span className="name">{name}</span>
-      <span className="price">{price}</span>
+      <span data-test="collection-item-name" className="name">{name}</span>
+      <span data-test="collection-item-price" className="price">{price}</span>
     </div>
   </div>
 );

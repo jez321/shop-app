@@ -6,7 +6,7 @@ const FormInput = ({
   handleChange, label, name, ...otherProps
 }) => (
   <div className="form-group">
-    <label htmlFor="name">
+    <label data-test="form-input-label" htmlFor="name">
       {
         label !== undefined ? 
           <span className={`form-input-label-text ${(otherProps.value && otherProps.value.length) > 0 ? 'shrink': ''}`}>{label}</span>

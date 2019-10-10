@@ -24,6 +24,14 @@ test('renders the form input', () => {
   expect(input.length).toBe(1);
 });
 
+test('form input has correct properties', () => {
+  const wrapper = setup();
+  const input = TestUtil.findByDataTestAttrVal(wrapper, 'form-input-input');
+  expect(input.at(0).prop('name')).toBe(defaultProps.name);
+  const label = TestUtil.findByDataTestAttrVal(wrapper, 'form-input-label');
+  expect(label.at(0).text()).toBe(defaultProps.label);
+});
+
 test('does not throw warning with expected props', () => {
   TestUtil.checkProps(FormInput, defaultProps);
 });
