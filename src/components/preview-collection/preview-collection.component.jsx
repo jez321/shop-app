@@ -13,8 +13,8 @@ const PreviewCollection = ({ title, items }) => (
         items.slice(0, 4).map(({
           id, name, imageUrl, price,
         }) => (
-          <CollectionItem key={id} name={name} imageUrl={imageUrl} price={price} />
-        ))
+            <CollectionItem key={id} name={name} imageUrl={imageUrl} price={price} />
+          ))
       }
     </div>
   </div>

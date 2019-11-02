@@ -10,7 +10,7 @@ class SignIn extends React.Component {
     super();
     this.state = {
       email: '',
-      password:''
+      password: ''
     };
   }
 
@@ -21,13 +21,13 @@ class SignIn extends React.Component {
       await auth.signInWithEmailAndPassword(email, password)
       this.setState({ email: '', password: '' });
     }
-    catch(error) {
+    catch (error) {
       console.error(error);
     }
   }
 
   handleChange = ($event) => {
-    const { value, name } = $event.target 
+    const { value, name } = $event.target
     this.setState({ [name]: value });
   }
 
@@ -42,7 +42,7 @@ class SignIn extends React.Component {
           <FormInput type="password" name="password" label="Password" value={password} handleChange={this.handleChange} required />
           <div className="buttons">
             <CustomButton type="submit">Sign in</CustomButton>
-            <CustomButton onClick={ signInWithGoogle } isGoogleSignIn>Sign in with Google</CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>Sign in with Google</CustomButton>
           </div>
         </form>
       </div>

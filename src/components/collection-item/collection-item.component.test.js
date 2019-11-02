@@ -5,11 +5,11 @@ import Adapter from 'enzyme-adapter-react-16';
 import CollectionItem from './collection-item.component';
 
 const defaultProps = {
-    imageUrl: 'https://test.com/test.jpg',
-    name: 'test-name',
-    price: 68,
+  imageUrl: 'https://test.com/test.jpg',
+  name: 'test-name',
+  price: 68,
 };
-configure({adapter: new Adapter()});
+configure({ adapter: new Adapter() });
 const setup = (props = {}, state = null) => {
   const setupProps = { ...defaultProps, ...props };
   const wrapper = shallow(<CollectionItem {...setupProps} />);

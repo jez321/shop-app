@@ -2,12 +2,14 @@
     "parser": "babel-eslint",
     "extends": [
         "airbnb",
-        "airbnb/hooks"
+        "airbnb/hooks",
+        "prettier"
     ],
     "rules": {
       "semi": [2, "always"],
       "react/jsx-props-no-spreading": [{
         "html": "ignore"
-      }]
+      }],
+      "prettier/prettier": ["error"]
     }
 }

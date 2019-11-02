@@ -4,13 +4,13 @@ import FormInput from './form-input.component';
 import TestUtil from '../../test/TestUtil';
 import Adapter from 'enzyme-adapter-react-16';
 
-const changeFn = function(){}
+const changeFn = function () { }
 const defaultProps = {
-    handleChange: changeFn,
-    name: 'test-name',
-    label: 'Test form input',
+  handleChange: changeFn,
+  name: 'test-name',
+  label: 'Test form input',
 };
-configure({adapter: new Adapter()});
+configure({ adapter: new Adapter() });
 const setup = (props = {}, state = null) => {
   const setupProps = { ...defaultProps, ...props };
   const wrapper = shallow(<FormInput {...setupProps} />);

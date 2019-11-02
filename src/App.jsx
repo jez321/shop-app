@@ -32,7 +32,7 @@ class App extends React.Component {
             console.log(this.state)
           })
         });
-      } 
+      }
       this.setState({ currentUser: null })
     })
   }
@@ -45,7 +45,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header currentUser={ this.state.currentUser } />
+        <Header currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />

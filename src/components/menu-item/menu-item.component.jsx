@@ -6,8 +6,7 @@ import PropTypes from 'prop-types';
 const MenuItem = ({
   title, imageUrl, size, linkUrl, match,
 }) => (
-  <NavLink to={`${match.url}${linkUrl}`} className={`menu-item ${size !== undefined ? size : ''}`}>
-    <>
+    <NavLink to={`${match.url}${linkUrl}`} className={`menu-item ${size !== undefined ? size : ''}`}>
       <div style={{ backgroundImage: `url(${imageUrl})` }} className="background-image" />
       <div className="content">
         <h1 className="title">{title}</h1>
@@ -15,9 +14,8 @@ const MenuItem = ({
           SHOP NOW
         </span>
       </div>
-    </>
-  </NavLink>
-);
+    </NavLink>
+  );
 
 MenuItem.propTypes = {
   title: PropTypes.string.isRequired,
