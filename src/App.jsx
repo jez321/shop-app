@@ -32,10 +32,8 @@ class App extends React.Component {
             console.log(this.state)
           })
         });
-      } else {
-        this.setState({ currentUser: null })
-        console.log(this.state)
-      }
+      } 
+      this.setState({ currentUser: null })
     })
   }
 
