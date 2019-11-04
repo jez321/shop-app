@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions';
 import { Redirect } from 'react-router-dom';
 
-class App extends React.Component {
+export class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
