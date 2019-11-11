@@ -1,10 +1,19 @@
-.collection-items {
+.collection-page {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 10px 0;
-  .collection-item {
-    margin-bottom: 25px;
+  flex-direction: column;
+
+  .title {
+    font-size: 38px;
+    margin: 0 auto 30px;
+  }
+
+  .collection-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+    & .collection-item {
+      margin-bottom: 30px;
+    }
   }
 }

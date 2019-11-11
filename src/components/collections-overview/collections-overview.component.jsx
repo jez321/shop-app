@@ -6,9 +6,12 @@ import PreviewCollection from '../preview-collection/preview-collection.componen
 
 const CollectionsOverview = ({ collections }) => (
   <div className="collections-overview">
-    {collections.map(({ id, title, items }) => (
-      <PreviewCollection key={id} title={title} items={items} />
-    ))}
+    {Object.keys(collections).map(key => {
+      const { id, title, items } = collections[key];
+      return (
+        <PreviewCollection key={id} title={title} items={items} />
+      )
+    })}
   </div>
 );
 
