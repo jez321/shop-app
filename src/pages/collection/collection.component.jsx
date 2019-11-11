@@ -7,7 +7,7 @@ import CollectionItem from '../../components/collection-item/collection-item.com
 const CollectionPage = ({ collection }) => (
   <div className="collection">
     <h2>{collection.title}</h2>
-    <div class="collection-items">
+    <div className="collection-items">
       {collection.items.map(item => (
         <CollectionItem key={item.id} item={item} />
       ))}
